@@ -1,50 +1,76 @@
-*{
-    margin:0;
-    border:0;
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box; /* Added for better sizing control */
 }
-body{
+
+body {
     background-color: #D1E9F6;
 }
-.container{
+
+.container {
     background-color: black;
-     position: absolute;
-     width:400px;
-     padding:25px 35px;
-     color:white;
-     border-radius: 10px;
-     top:25%;
-     left:35%;
+    position: absolute;
+    width: 90%; /* Change to percentage for responsiveness */
+    max-width: 400px; /* Limit max width */
+    padding: 25px 35px;
+    color: white;
+    border-radius: 10px;
+    top: 25%;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
 }
-.generator h2{
+
+.generator h2 {
     text-align: center;
-    font-size: 35px;
-    margin-top: 0px;
+    font-size: 2rem; /* Use rem for scalability */
+    margin-top: 0;
 }
-.generator input{
-    width:100%;
-    height:3rem;
+
+.generator input {
+    width: 100%;
+    height: 3rem;
     font-size: 1rem;
     border-radius: 10px;
     margin-top: 2rem;
 }
-.generator button{
-    height:3rem;
+
+.generator button {
+    height: 3rem;
     margin-top: 2rem;
     border-radius: 10px;
-    margin-left: 120px; 
+    width: calc(100% - 40px); /* Full width minus padding */
     text-align: center;
     font-size: 15px;
     background-color: #b4d6cd;
 }
-.outer{
-    display:flex;
+
+.outer {
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
 }
-.qrImg{
-    display:flex;
+
+.qrImg {
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 95%; /* Adjust width for mobile */
+        padding: 15px 20px; /* Adjust padding */
+    }
+
+    .generator h2 {
+        font-size: 1.5rem; /* Smaller heading on mobile */
+    }
+
+    .generator button {
+        font-size: 14px; /* Smaller button text on mobile */
+    }
 }
